@@ -5,7 +5,7 @@ import pics from '../Pics/Pics';
 
  function Image() {
   return (
-      <ImageList sx={{width: 500, height: 450}} cols={3} rowHeight={164}>
+      <ImageList variant='masonry' sx={{width: 500, height: 450}} cols={3} rowHeight={164}>
         {pics.map((item)=> (
             <ImageListItem>
                 <img 

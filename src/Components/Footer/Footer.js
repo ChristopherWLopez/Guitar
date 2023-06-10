@@ -1,13 +1,28 @@
-import { Button, Typography } from '@mui/material'
-import React from 'react'
+import { Button, Typography, Modal } from '@mui/material'
+import React, { useState } from 'react'
+import ModalComponent from '../Modal';
 
-function Footer() {
+function Footer(props) {
+
+  const [open, setToOpen]= useState(false);
+
+ 
+  const setModalToOpen =()=>{
+    setToOpen(true);
+
+   };
+  
+
   return (
     <div>
       <Typography>Christopher Lopez</Typography>
       <Typography>
-        <Button>Contact:</Button>
+        <Button
+        onClick={setModalToOpen}
+        >Contact:</Button>
+        <ModalComponent open={open}/>
       </Typography>
+
     </div>
   )
 }
